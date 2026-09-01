@@ -1,0 +1,128 @@
+{
+  "current_index": 10,
+  "total": 20,
+  "repo": "Raja-Bhaiya-Jii/Py_Program",
+  "note": "Tracker stored in repo so it survives across scheduled runs. current_index=10 means Days 1-10 are done; tomorrow push schedule[10] (Day 11).",
+  "schedule": [
+    {
+      "day": 1,
+      "date": "2026-08-31",
+      "file": "stock_management.py",
+      "commit_msg": "Day 1: Electronics Stock Management System"
+    },
+    {
+      "day": 2,
+      "date": "2026-09-01",
+      "file": "hello_world.py",
+      "commit_msg": "Day 2: Hello World program"
+    },
+    {
+      "day": 3,
+      "date": "2026-09-02",
+      "file": "calculator.py",
+      "commit_msg": "Day 3: Simple Calculator"
+    },
+    {
+      "day": 4,
+      "date": "2026-09-03",
+      "file": "number_guessing.py",
+      "commit_msg": "Day 4: Number Guessing Game"
+    },
+    {
+      "day": 5,
+      "date": "2026-09-04",
+      "file": "palindrome_checker.py",
+      "commit_msg": "Day 5: Palindrome Checker"
+    },
+    {
+      "day": 6,
+      "date": "2026-09-05",
+      "file": "fibonacci_sequence.py",
+      "commit_msg": "Day 6: Fibonacci Sequence Generator"
+    },
+    {
+      "day": 7,
+      "date": "2026-09-06",
+      "file": "file_operations.py",
+      "commit_msg": "Day 7: File Operations demo"
+    },
+    {
+      "day": 8,
+      "date": "2026-09-07",
+      "file": "prime_checker.py",
+      "commit_msg": "Day 8: Prime Number Checker"
+    },
+    {
+      "day": 9,
+      "date": "2026-09-08",
+      "file": "word_counter.py",
+      "commit_msg": "Day 9: Word Counter"
+    },
+    {
+      "day": 10,
+      "date": "2026-09-09",
+      "file": "rock_paper_scissors.py",
+      "commit_msg": "Day 10: Rock Paper Scissors game"
+    },
+    {
+      "day": 11,
+      "date": "2026-09-10",
+      "file": "temperature_converter.py",
+      "commit_msg": "Day 11: Temperature Converter"
+    },
+    {
+      "day": 12,
+      "date": "2026-09-11",
+      "file": "to_do_list.py",
+      "commit_msg": "Day 12: To-Do List Application"
+    },
+    {
+      "day": 13,
+      "date": "2026-09-12",
+      "file": "tic_tac_toe.py",
+      "commit_msg": "Day 13: Tic-Tac-Toe game"
+    },
+    {
+      "day": 14,
+      "date": "2026-09-13",
+      "file": "quiz_game.py",
+      "commit_msg": "Day 14: Quiz Game"
+    },
+    {
+      "day": 15,
+      "date": "2026-09-14",
+      "file": "binary_converter.py",
+      "commit_msg": "Day 15: Binary Converter"
+    },
+    {
+      "day": 16,
+      "date": "2026-09-15",
+      "file": "encryption_tool.py",
+      "commit_msg": "Day 16: Caesar Cipher Encryption Tool"
+    },
+    {
+      "day": 17,
+      "date": "2026-09-16",
+      "file": "dice_roller.py",
+      "commit_msg": "Day 17: Dice Roller simulator"
+    },
+    {
+      "day": 18,
+      "date": "2026-09-17",
+      "file": "random_password_generator.py",
+      "commit_msg": "Day 18: Random Password Generator"
+    },
+    {
+      "day": 19,
+      "date": "2026-09-18",
+      "file": "stopwatch.py",
+      "commit_msg": "Day 19: Stopwatch"
+    },
+    {
+      "day": 20,
+      "date": "2026-09-19",
+      "file": "matrix_operations.py",
+      "commit_msg": "Day 20: Matrix Operations"
+    }
+  ]
+}
