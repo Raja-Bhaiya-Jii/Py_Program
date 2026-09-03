@@ -1,7 +1,7 @@
 {
-  "current_index": 11,
+  "current_index": 12,
   "total": 20,
-  "note": "Days 1-11 already pushed. current_index=11 means next push is schedule[11] (Day 12).",
+  "note": "Days 1-12 already pushed. current_index=12 means next push is schedule[12] (Day 13).",
   "schedule": [
     {
       "day": 1,
