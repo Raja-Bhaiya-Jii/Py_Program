@@ -1,5 +1,5 @@
 {
-  "current_index": 12,
+  "current_index": 13,
   "total": 20,
   "note": "Days 1-12 already pushed. current_index=12 means next push is schedule[12] (Day 13).",
   "schedule": [
@@ -92,7 +92,7 @@
       "date": "2026-09-12",
       "file": "tic_tac_toe.py",
       "commit_msg": "Day 13: Tic Tac Toe",
-      "code": "pending"
+      "code": "pushed"
     },
     {
       "day": 14,
