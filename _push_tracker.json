@@ -1,1 +1,187 @@
-{\n  \"current_index\": 16,\n  \"total\": 36,\n  \"note\": \"Combined tracker: 16 pushed, 20 pending. current_index=16 means next push is schedule[16].\",\n  \"schedule\": [\n    {\n      \"file\": \"stock_management.py\",\n      \"commit_msg\": \"Day 1: Electronics Stock Management System\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"hello_world.py\",\n      \"commit_msg\": \"Day 2: Hello World program\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"calculator.py\",\n      \"commit_msg\": \"Day 3: Simple Calculator\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"number_guessing.py\",\n      \"commit_msg\": \"Day 4: Number Guessing Game\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"palindrome_checker.py\",\n      \"commit_msg\": \"Day 5: Palindrome Checker\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"fibonacci_sequence.py\",\n      \"commit_msg\": \"Day 6: Fibonacci Sequence Generator\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"file_operations.py\",\n      \"commit_msg\": \"Day 7: File Operations demo\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"prime_checker.py\",\n      \"commit_msg\": \"Day 8: Prime Number Checker\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"word_counter.py\",\n      \"commit_msg\": \"Day 9: Word Counter\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"rock_paper_scissors.py\",\n      \"commit_msg\": \"Day 10: Rock Paper Scissors game\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"temperature_converter.py\",\n      \"commit_msg\": \"Day 11: Temperature Converter\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"to_do_list.py\",\n      \"commit_msg\": \"Day 12: To-Do List Application\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"tic_tac_toe.py\",\n      \"commit_msg\": \"Day 13: Tic-Tac-Toe game\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"quiz_game.py\",\n      \"commit_msg\": \"Day 14: Quiz Game\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"password_generator.py\",\n      \"commit_msg\": \"Day 15: Password Generator\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"encryption_tool.py\",\n      \"commit_msg\": \"Day 16: Caesar Cipher Encryption Tool\",\n      \"code\": \"pushed\"\n    },\n    {\n      \"file\": \"stopwatch.py\",\n      \"commit_msg\": \"Day 17: Stopwatch Application\",\n      \"code\": \"\\\"\\\"\\\"Stopwatch Application\\nA simple stopwatch with start, stop, and lap functionality.\\\"\\\"\\\"\\nimport time\\n\\n\\nclass Stopwatch:\\n    def __init__(self):\\n        self.start_time = None\\n        self.elapsed = 0\\n        self.running = False\\n        self.laps = []\\n\\n    def start(self):\\n        if not self.running:\\n            self.start_time = time.time() - self.elapsed\\n            self.running = True\\n            print(\\\"Stopwatch started.\\\")\\n        else:\\n            print(\\\"Already running.\\\")\\n\\n    def stop(self):\\n        if self.running:\\n            self.elapsed = time.time() - self.start_time\\n            self.running = False\\n            print(\\\"Stopwatch stopped.\\\")\\n        else:\\n            print(\\\"Not running.\\\")\\n\\n    def lap(self):\\n        if self.running:\\n            current = time.time() - self.start_time\\n            self.laps.append(current)\\n            print(f\\\"Lap {len(self.laps)}: {self._format(current)}\\\")\\n        else:\\n            print(\\\"Not running.\\\")\\n\\n    def reset(self):\\n        self.start_time = None\\n        self.elapsed = 0\\n        self.running = False\\n        self.laps = []\\n        print(\\\"Stopwatch reset.\\\")\\n\\n    def display(self):\\n        if self.running:\\n            t = time.time() - self.start_time\\n        else:\\n            t = self.elapsed\\n        print(f\\\"Time: {self._format(t)}\\\")\\n\\n    def _format(self, seconds):\\n        m = int(seconds // 60)\\n        s = int(seconds % 60)\\n        ms = int((seconds * 100) % 100)\\n        return f\\\"{m:02d}:{s:02d}.{ms:02d}\\\"\\n\\n\\ndef main():\\n    print(\\\"=\\\" * 40)\\n    print(\\\"       STOPWATCH\\\")\\n    print(\\\"=\\\" * 40)\\n    sw = Stopwatch()\\n    while True:\\n        print(\\\"\\\\n1.Start  2.Stop  3.Lap  4.Reset  5.Time  6.Exit\\\")\\n        choice = input(\\\"Choice: \\").strip()\\n        if choice == '1': sw.start()\\n        elif choice == '2': sw.stop()\\n        elif choice == '3': sw.lap()\\n        elif choice == '4': sw.reset()\\n        elif choice == '5': sw.display()\\n        elif choice == '6': break\\n        else: print(\\\"Invalid choice.\\\")\\n\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"matrix_operations.py\",\n      \"commit_msg\": \"Day 18: Matrix Operations\",\n      \"code\": \"\\\"\\\"\\\"Matrix Operations\\nPerforms addition, subtraction, multiplication, transpose, and determinant.\\\"\\\"\\\"\\nimport copy\\n\\n\\ndef create_matrix(rows, cols):\\n    matrix = []\\n    for i in range(rows):\\n        row = list(map(float, input(f\\\"Row {i+1} (space-separated): \\").split()))\\n        matrix.append(row)\\n    return matrix\\n\\n\\ndef print_matrix(m, label=\\\"Matrix\\\"):\\n    print(f\\\"{label}:\\\")\\n    for row in m:\\n        print(\\\"  \\\", \\\" \\\".join(f\\\"{x:8.2f}\\\" for x in row))\\n\\n\\ndef add(a, b):\\n    return [[a[i][j] + b[i][j] for j in range(len(a[0]))] for i in range(len(a))]\\n\\n\\ndef subtract(a, b):\\n    return [[a[i][j] - b[i][j] for j in range(len(a[0]))] for i in range(len(a))]\\n\\n\\ndef multiply(a, b):\\n    result = [[0]*len(b[0]) for _ in range(len(a))]\\n    for i in range(len(a)):\\n        for j in range(len(b[0])):\\n            for k in range(len(b)):\\n                result[i][j] += a[i][k] * b[k][j]\\n    return result\\n\\n\\ndef transpose(m):\\n    return [[m[j][i] for j in range(len(m))] for i in range(len(m[0]))]\\n\\n\\ndef determinant(m):\\n    n = len(m)\\n    if n == 1: return m[0][0]\\n    if n == 2: return m[0][0]*m[1][1] - m[0][1]*m[1][0]\\n    det = 0\\n    for c in range(n):\\n        sub = [row[:c] + row[c+1:] for row in m[1:]]\\n        det += ((-1)**c) * m[0][c] * determinant(sub)\\n    return det\\n\\n\\ndef main():\\n    print(\\\"=\\\" * 40)\\n    print(\\\"    MATRIX OPERATIONS\\\")\\n    print(\\\"=\\\" * 40)\\n    while True:\\n        print(\\\"\\\\n1.Add  2.Subtract  3.Multiply  4.Transpose  5.Determinant  6.Exit\\\")\\n        ch = input(\\\"Choice: \\").strip()\\n        if ch in ('1','2','3'):\\n            r = int(input(\\\"Rows: \\\")); c = int(input(\\\"Cols: \\\"))\\n            print(\\\"Matrix A:\\\"); a = create_matrix(r, c)\\n            print(\\\"Matrix B:\\\"); b = create_matrix(r, c)\\n            if ch == '1': print_matrix(add(a, b), \\\"A + B\\\")\\n            elif ch == '2': print_matrix(subtract(a, b), \\\"A - B\\\")\\n            else: print_matrix(multiply(a, b), \\\"A x B\\\")\\n        elif ch == '4':\\n            r = int(input(\\\"Rows: \\\")); c = int(input(\\\"Cols: \\\"))\\n            a = create_matrix(r, c)\\n            print_matrix(transpose(a), \\\"Transpose\\\")\\n        elif ch == '5':\\n            n = int(input(\\\"Size (NxN): \\\"))\\n            a = create_matrix(n, n)\\n            print(f\\\"Determinant: {determinant(a):.2f}\\\")\\n        elif ch == '6': break\\n        else: print(\\\"Invalid choice.\\\")\\n\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"simple_calculator.py\",\n      \"commit_msg\": \"Day 2: Simple calculator with 4 operations\",\n      \"code\": \"\\\"\\\"\\\"Program 2: Simple Calculator\\nPerforms addition, subtraction, multiplication, and division.\\\"\\\"\\\"\\ndef add(a, b): return a + b\\ndef sub(a, b): return a - b\\ndef mul(a, b): return a * b\\ndef div(a, b):\\n    if b == 0:\\n        return \\\"Error: Division by zero\\\"\\n    return a / b\\n\\ndef main():\\n    print(\\\"Simple Calculator\\\")\\n    a = float(input(\\\"Enter first number: \\\"))\\n    op = input(\\\"Enter operator (+, -, *, /): \\\")\\n    b = float(input(\\\"Enter second number: \\\"))\\n    ops = {\\\"+\\\": add, \\\"-\\\": sub, \\\"*\\\": mul, \\\"/\\\": div}\\n    if op in ops:\\n        print(f\\\"Result: {ops[op](a, b)}\\\")\\n    else:\\n        print(\\\"Invalid operator\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"even_or_odd.py\",\n      \"commit_msg\": \"Day 3: Even or Odd checker\",\n      \"code\": \"\\\"\\\"\\\"Program 3: Even or Odd Checker\\nChecks if a number is even or odd.\\\"\\\"\\\"\\ndef is_even(n):\\n    return n % 2 == 0\\n\\ndef main():\\n    n = int(input(\\\"Enter a number: \\\"))\\n    if is_even(n):\\n        print(f\\\"{n} is even\\\")\\n    else:\\n        print(f\\\"{n} is odd\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"fibonacci.py\",\n      \"commit_msg\": \"Day 4: Fibonacci sequence generator\",\n      \"code\": \"\\\"\\\"\\\"Program 4: Fibonacci Sequence\\nGenerates the Fibonacci sequence up to n terms.\\\"\\\"\\\"\\ndef fibonacci(n):\\n    seq = [0, 1]\\n    for i in range(2, n):\\n        seq.append(seq[-1] + seq[-2])\\n    return seq[:n]\\n\\ndef main():\\n    n = int(input(\\\"Enter number of terms: \\\"))\\n    print(fibonacci(n))\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"palindrome_check.py\",\n      \"commit_msg\": \"Day 5: Palindrome string checker\",\n      \"code\": \"\\\"\\\"\\\"Program 5: Palindrome Checker\\nChecks if a string reads the same forwards and backwards.\\\"\\\"\\\"\\ndef is_palindrome(s):\\n    cleaned = s.lower().replace(\\\" \\\", \\\"\\\")\\n    return cleaned == cleaned[::-1]\\n\\ndef main():\\n    s = input(\\\"Enter a string: \\\")\\n    if is_palindrome(s):\\n        print(f'\\\"{s}\\\" is a palindrome')\\n    else:\\n        print(f'\\\"{s}\\\" is not a palindrome')\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"prime_check.py\",\n      \"commit_msg\": \"Day 6: Prime number checker\",\n      \"code\": \"\\\"\\\"\\\"Program 6: Prime Number Checker\\nChecks if a number is prime.\\\"\\\"\\\"\\ndef is_prime(n):\\n    if n < 2:\\n        return False\\n    for i in range(2, int(n**0.5) + 1):\\n        if n % i == 0:\\n            return False\\n    return True\\n\\ndef main():\\n    n = int(input(\\\"Enter a number: \\\"))\\n    if is_prime(n):\\n        print(f\\\"{n} is a prime number\\\")\\n    else:\\n        print(f\\\"{n} is not a prime number\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"factorial.py\",\n      \"commit_msg\": \"Day 7: Factorial using recursion and loop\",\n      \"code\": \"\\\"\\\"\\\"Program 7: Factorial Calculator\\nComputes factorial using both recursion and iteration.\\\"\\\"\\\"\\ndef factorial_recursive(n):\\n    if n <= 1:\\n        return 1\\n    return n * factorial_recursive(n - 1)\\n\\ndef factorial_iterative(n):\\n    result = 1\\n    for i in range(2, n + 1):\\n        result *= i\\n    return result\\n\\ndef main():\\n    n = int(input(\\\"Enter a number: \\\"))\\n    print(f\\\"Recursive: {factorial_recursive(n)}\\\")\\n    print(f\\\"Iterative: {factorial_iterative(n)}\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"reverse_string.py\",\n      \"commit_msg\": \"Day 8: Reverse a string\",\n      \"code\": \"\\\"\\\"\\\"Program 8: Reverse a String\\nReverses a string using slicing and a manual loop.\\\"\\\"\\\"\\ndef reverse_slice(s):\\n    return s[::-1]\\n\\ndef reverse_manual(s):\\n    rev = \\\"\\\"\\n    for ch in s:\\n        rev = ch + rev\\n    return rev\\n\\ndef main():\\n    s = input(\\\"Enter a string: \\\")\\n    print(f\\\"Slicing: {reverse_slice(s)}\\\")\\n    print(f\\\"Manual:  {reverse_manual(s)}\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"count_vowels.py\",\n      \"commit_msg\": \"Day 9: Count vowels in a string\",\n      \"code\": \"\\\"\\\"\\\"Program 9: Count Vowels\\nCounts the number of vowels in a string.\\\"\\\"\\\"\\ndef count_vowels(s):\\n    vowels = \\\"aeiouAEIOU\\\"\\n    return sum(1 for ch in s if ch in vowels)\\n\\ndef main():\\n    s = input(\\\"Enter a string: \\\")\\n    print(f\\\"Number of vowels: {count_vowels(s)}\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"sum_of_digits.py\",\n      \"commit_msg\": \"Day 10: Sum of digits of a number\",\n      \"code\": \"\\\"\\\"\\\"Program 10: Sum of Digits\\nCalculates the sum of digits of a number.\\\"\\\"\\\"\\ndef sum_of_digits(n):\\n    return sum(int(d) for d in str(abs(n)))\\n\\ndef main():\\n    n = int(input(\\\"Enter a number: \\\"))\\n    print(f\\\"Sum of digits: {sum_of_digits(n)}\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"multiplication_table.py\",\n      \"commit_msg\": \"Day 11: Multiplication table generator\",\n      \"code\": \"\\\"\\\"\\\"Program 11: Multiplication Table\\nGenerates a multiplication table for a given number.\\\"\\\"\\\"\\ndef multiplication_table(n, upto=10):\\n    for i in range(1, upto + 1):\\n        print(f\\\"{n} x {i} = {n * i}\\\")\\n\\ndef main():\\n    n = int(input(\\\"Enter a number: \\\"))\\n    multiplication_table(n)\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"largest_of_three.py\",\n      \"commit_msg\": \"Day 12: Find largest of three numbers\",\n      \"code\": \"\\\"\\\"\\\"Program 12: Largest of Three Numbers\\nFinds the largest among three numbers.\\\"\\\"\\\"\\ndef largest(a, b, c):\\n    return max(a, b, c)\\n\\ndef main():\\n    a = float(input(\\\"Enter first number: \\\"))\\n    b = float(input(\\\"Enter second number: \\\"))\\n    c = float(input(\\\"Enter third number: \\\"))\\n    print(f\\\"Largest: {largest(a, b, c)}\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"grade_calculator.py\",\n      \"commit_msg\": \"Day 13: Student grade calculator\",\n      \"code\": \"\\\"\\\"\\\"Program 13: Grade Calculator\\nAssigns a letter grade based on a score.\\\"\\\"\\\"\\ndef get_grade(score):\\n    if score >= 90: return \\\"A\\\"\\n    if score >= 80: return \\\"B\\\"\\n    if score >= 70: return \\\"C\\\"\\n    if score >= 60: return \\\"D\\\"\\n    return \\\"F\\\"\\n\\ndef main():\\n    score = float(input(\\\"Enter score (0-100): \\\"))\\n    print(f\\\"Grade: {get_grade(score)}\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"leap_year.py\",\n      \"commit_msg\": \"Day 14: Leap year checker\",\n      \"code\": \"\\\"\\\"\\\"Program 14: Leap Year Checker\\nChecks if a year is a leap year.\\\"\\\"\\\"\\ndef is_leap_year(year):\\n    if year % 400 == 0:\\n        return True\\n    if year % 100 == 0:\\n        return False\\n    return year % 4 == 0\\n\\ndef main():\\n    year = int(input(\\\"Enter a year: \\\"))\\n    if is_leap_year(year):\\n        print(f\\\"{year} is a leap year\\\")\\n    else:\\n        print(f\\\"{year} is not a leap year\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"count_words.py\",\n      \"commit_msg\": \"Day 16: Count words in a sentence\",\n      \"code\": \"\\\"\\\"\\\"Program 16: Word Counter\\nCounts the number of words in a sentence.\\\"\\\"\\\"\\ndef count_words(sentence):\\n    return len(sentence.split())\\n\\ndef main():\\n    s = input(\\\"Enter a sentence: \\\")\\n    print(f\\\"Word count: {count_words(s)}\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"armstrong_number.py\",\n      \"commit_msg\": \"Day 17: Armstrong number checker\",\n      \"code\": \"\\\"\\\"\\\"Program 17: Armstrong Number Checker\\nChecks if a number is an Armstrong number.\\\"\\\"\\\"\\ndef is_armstrong(n):\\n    digits = [int(d) for d in str(n)]\\n    power = len(digits)\\n    return sum(d ** power for d in digits) == n\\n\\ndef main():\\n    n = int(input(\\\"Enter a number: \\\"))\\n    if is_armstrong(n):\\n        print(f\\\"{n} is an Armstrong number\\\")\\n    else:\\n        print(f\\\"{n} is not an Armstrong number\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"gcd_lcm.py\",\n      \"commit_msg\": \"Day 18: GCD and LCM calculator\",\n      \"code\": \"\\\"\\\"\\\"Program 18: GCD and LCM Calculator\\nComputes the greatest common divisor and least common multiple.\\\"\\\"\\\"\\ndef gcd(a, b):\\n    while b:\\n        a, b = b, a % b\\n    return a\\n\\ndef lcm(a, b):\\n    return abs(a * b) // gcd(a, b) if a and b else 0\\n\\ndef main():\\n    a = int(input(\\\"Enter first number: \\\"))\\n    b = int(input(\\\"Enter second number: \\\"))\\n    print(f\\\"GCD: {gcd(a, b)}\\\")\\n    print(f\\\"LCM: {lcm(a, b)}\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"pattern_pyramid.py\",\n      \"commit_msg\": \"Day 19: Star pyramid pattern\",\n      \"code\": \"\\\"\\\"\\\"Program 19: Star Pyramid Pattern\\nPrints a pyramid of stars of height n.\\\"\\\"\\\"\\ndef pyramid(n):\\n    for i in range(1, n + 1):\\n        spaces = \\\" \\\" * (n - i)\\n        stars = \\\"*\\\" * (2 * i - 1)\\n        print(spaces + stars)\\n\\ndef main():\\n    n = int(input(\\\"Enter pyramid height: \\\"))\\n    pyramid(n)\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    },\n    {\n      \"file\": \"number_guessing_game.py\",\n      \"commit_msg\": \"Day 20: Number guessing game\",\n      \"code\": \"\\\"\\\"\\\"Program 20: Number Guessing Game\\nThe computer picks a random number and you try to guess it.\\\"\\\"\\\"\\nimport random\\n\\ndef main():\\n    secret = random.randint(1, 100)\\n    attempts = 0\\n    print(\\\"Guess a number between 1 and 100!\\\")\\n    while True:\\n        guess = int(input(\\\"Your guess: \\\"))\\n        attempts += 1\\n        if guess < secret:\\n            print(\\\"Too low!\\\")\\n        elif guess > secret:\\n            print(\\\"Too high!\\\")\\n        else:\\n            print(f\\\"Correct! You guessed it in {attempts} attempts.\\\")\\n            break\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\\n\"\n    }\n  ]\n}
+{
+  "current_index": 16,
+  "total": 36,
+  "note": "Combined tracker: 16 pushed, 20 pending. current_index=16 means next push is schedule[16].",
+  "schedule": [
+    {
+      "file": "stock_management.py",
+      "commit_msg": "Day 1: Electronics Stock Management System",
+      "code": "pushed"
+    },
+    {
+      "file": "hello_world.py",
+      "commit_msg": "Day 2: Hello World program",
+      "code": "pushed"
+    },
+    {
+      "file": "calculator.py",
+      "commit_msg": "Day 3: Simple Calculator",
+      "code": "pushed"
+    },
+    {
+      "file": "number_guessing.py",
+      "commit_msg": "Day 4: Number Guessing Game",
+      "code": "pushed"
+    },
+    {
+      "file": "palindrome_checker.py",
+      "commit_msg": "Day 5: Palindrome Checker",
+      "code": "pushed"
+    },
+    {
+      "file": "fibonacci_sequence.py",
+      "commit_msg": "Day 6: Fibonacci Sequence Generator",
+      "code": "pushed"
+    },
+    {
+      "file": "file_operations.py",
+      "commit_msg": "Day 7: File Operations demo",
+      "code": "pushed"
+    },
+    {
+      "file": "prime_checker.py",
+      "commit_msg": "Day 8: Prime Number Checker",
+      "code": "pushed"
+    },
+    {
+      "file": "word_counter.py",
+      "commit_msg": "Day 9: Word Counter",
+      "code": "pushed"
+    },
+    {
+      "file": "rock_paper_scissors.py",
+      "commit_msg": "Day 10: Rock Paper Scissors game",
+      "code": "pushed"
+    },
+    {
+      "file": "temperature_converter.py",
+      "commit_msg": "Day 11: Temperature Converter",
+      "code": "pushed"
+    },
+    {
+      "file": "to_do_list.py",
+      "commit_msg": "Day 12: To-Do List Application",
+      "code": "pushed"
+    },
+    {
+      "file": "tic_tac_toe.py",
+      "commit_msg": "Day 13: Tic-Tac-Toe game",
+      "code": "pushed"
+    },
+    {
+      "file": "quiz_game.py",
+      "commit_msg": "Day 14: Quiz Game",
+      "code": "pushed"
+    },
+    {
+      "file": "password_generator.py",
+      "commit_msg": "Day 15: Password Generator",
+      "code": "pushed"
+    },
+    {
+      "file": "encryption_tool.py",
+      "commit_msg": "Day 16: Caesar Cipher Encryption Tool",
+      "code": "pushed"
+    },
+    {
+      "file": "stopwatch.py",
+      "commit_msg": "Day 17: Stopwatch Application",
+      "code": "\"\"\"Stopwatch Application\nA simple stopwatch with start, stop, and lap functionality.\"\"\"\nimport time\n\n\nclass Stopwatch:\n    def __init__(self):\n        self.start_time = None\n        self.elapsed = 0\n        self.running = False\n        self.laps = []\n\n    def start(self):\n        if not self.running:\n            self.start_time = time.time() - self.elapsed\n            self.running = True\n            print(\"Stopwatch started.\")\n        else:\n            print(\"Already running.\")\n\n    def stop(self):\n        if self.running:\n            self.elapsed = time.time() - self.start_time\n            self.running = False\n            print(\"Stopwatch stopped.\")\n        else:\n            print(\"Not running.\")\n\n    def lap(self):\n        if self.running:\n            current = time.time() - self.start_time\n            self.laps.append(current)\n            print(f\"Lap {len(self.laps)}: {self._format(current)}\")\n        else:\n            print(\"Not running.\")\n\n    def reset(self):\n        self.start_time = None\n        self.elapsed = 0\n        self.running = False\n        self.laps = []\n        print(\"Stopwatch reset.\")\n\n    def display(self):\n        if self.running:\n            t = time.time() - self.start_time\n        else:\n            t = self.elapsed\n        print(f\"Time: {self._format(t)}\")\n\n    def _format(self, seconds):\n        m = int(seconds // 60)\n        s = int(seconds % 60)\n        ms = int((seconds * 100) % 100)\n        return f\"{m:02d}:{s:02d}.{ms:02d}\"\n\n\ndef main():\n    print(\"=\" * 40)\n    print(\"       STOPWATCH\")\n    print(\"=\" * 40)\n    sw = Stopwatch()\n    while True:\n        print(\"\\n1.Start  2.Stop  3.Lap  4.Reset  5.Time  6.Exit\")\n        choice = input(\"Choice: \").strip()\n        if choice == '1': sw.start()\n        elif choice == '2': sw.stop()\n        elif choice == '3': sw.lap()\n        elif choice == '4': sw.reset()\n        elif choice == '5': sw.display()\n        elif choice == '6': break\n        else: print(\"Invalid choice.\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "matrix_operations.py",
+      "commit_msg": "Day 18: Matrix Operations",
+      "code": "\"\"\"Matrix Operations\nPerforms addition, subtraction, multiplication, transpose, and determinant.\"\"\"\nimport copy\n\n\ndef create_matrix(rows, cols):\n    matrix = []\n    for i in range(rows):\n        row = list(map(float, input(f\"Row {i+1} (space-separated): \").split()))\n        matrix.append(row)\n    return matrix\n\n\ndef print_matrix(m, label=\"Matrix\"):\n    print(f\"{label}:\")\n    for row in m:\n        print(\"  \", \" \".join(f\"{x:8.2f}\" for x in row))\n\n\ndef add(a, b):\n    return [[a[i][j] + b[i][j] for j in range(len(a[0]))] for i in range(len(a))]\n\n\ndef subtract(a, b):\n    return [[a[i][j] - b[i][j] for j in range(len(a[0]))] for i in range(len(a))]\n\n\ndef multiply(a, b):\n    result = [[0]*len(b[0]) for _ in range(len(a))]\n    for i in range(len(a)):\n        for j in range(len(b[0])):\n            for k in range(len(b)):\n                result[i][j] += a[i][k] * b[k][j]\n    return result\n\n\ndef transpose(m):\n    return [[m[j][i] for j in range(len(m))] for i in range(len(m[0]))]\n\n\ndef determinant(m):\n    n = len(m)\n    if n == 1: return m[0][0]\n    if n == 2: return m[0][0]*m[1][1] - m[0][1]*m[1][0]\n    det = 0\n    for c in range(n):\n        sub = [row[:c] + row[c+1:] for row in m[1:]]\n        det += ((-1)**c) * m[0][c] * determinant(sub)\n    return det\n\n\ndef main():\n    print(\"=\" * 40)\n    print(\"    MATRIX OPERATIONS\")\n    print(\"=\" * 40)\n    while True:\n        print(\"\\n1.Add  2.Subtract  3.Multiply  4.Transpose  5.Determinant  6.Exit\")\n        ch = input(\"Choice: \").strip()\n        if ch in ('1','2','3'):\n            r = int(input(\"Rows: \")); c = int(input(\"Cols: \"))\n            print(\"Matrix A:\"); a = create_matrix(r, c)\n            print(\"Matrix B:\"); b = create_matrix(r, c)\n            if ch == '1': print_matrix(add(a, b), \"A + B\")\n            elif ch == '2': print_matrix(subtract(a, b), \"A - B\")\n            else: print_matrix(multiply(a, b), \"A x B\")\n        elif ch == '4':\n            r = int(input(\"Rows: \")); c = int(input(\"Cols: \"))\n            a = create_matrix(r, c)\n            print_matrix(transpose(a), \"Transpose\")\n        elif ch == '5':\n            n = int(input(\"Size (NxN): \"))\n            a = create_matrix(n, n)\n            print(f\"Determinant: {determinant(a):.2f}\")\n        elif ch == '6': break\n        else: print(\"Invalid choice.\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "simple_calculator.py",
+      "commit_msg": "Day 2: Simple calculator with 4 operations",
+      "code": "\"\"\"Program 2: Simple Calculator\nPerforms addition, subtraction, multiplication, and division.\"\"\"\ndef add(a, b): return a + b\ndef sub(a, b): return a - b\ndef mul(a, b): return a * b\ndef div(a, b):\n    if b == 0:\n        return \"Error: Division by zero\"\n    return a / b\n\ndef main():\n    print(\"Simple Calculator\")\n    a = float(input(\"Enter first number: \"))\n    op = input(\"Enter operator (+, -, *, /): \")\n    b = float(input(\"Enter second number: \"))\n    ops = {\"+\": add, \"-\": sub, \"*\": mul, \"/\": div}\n    if op in ops:\n        print(f\"Result: {ops[op](a, b)}\")\n    else:\n        print(\"Invalid operator\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "even_or_odd.py",
+      "commit_msg": "Day 3: Even or Odd checker",
+      "code": "\"\"\"Program 3: Even or Odd Checker\nChecks if a number is even or odd.\"\"\"\ndef is_even(n):\n    return n % 2 == 0\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    if is_even(n):\n        print(f\"{n} is even\")\n    else:\n        print(f\"{n} is odd\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "fibonacci.py",
+      "commit_msg": "Day 4: Fibonacci sequence generator",
+      "code": "\"\"\"Program 4: Fibonacci Sequence\nGenerates the Fibonacci sequence up to n terms.\"\"\"\ndef fibonacci(n):\n    seq = [0, 1]\n    for i in range(2, n):\n        seq.append(seq[-1] + seq[-2])\n    return seq[:n]\n\ndef main():\n    n = int(input(\"Enter number of terms: \"))\n    print(fibonacci(n))\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "palindrome_check.py",
+      "commit_msg": "Day 5: Palindrome string checker",
+      "code": "\"\"\"Program 5: Palindrome Checker\nChecks if a string reads the same forwards and backwards.\"\"\"\ndef is_palindrome(s):\n    cleaned = s.lower().replace(\" \", \"\")\n    return cleaned == cleaned[::-1]\n\ndef main():\n    s = input(\"Enter a string: \")\n    if is_palindrome(s):\n        print(f'\"{s}\" is a palindrome')\n    else:\n        print(f'\"{s}\" is not a palindrome')\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "prime_check.py",
+      "commit_msg": "Day 6: Prime number checker",
+      "code": "\"\"\"Program 6: Prime Number Checker\nChecks if a number is prime.\"\"\"\ndef is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    if is_prime(n):\n        print(f\"{n} is a prime number\")\n    else:\n        print(f\"{n} is not a prime number\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "factorial.py",
+      "commit_msg": "Day 7: Factorial using recursion and loop",
+      "code": "\"\"\"Program 7: Factorial Calculator\nComputes factorial using both recursion and iteration.\"\"\"\ndef factorial_recursive(n):\n    if n <= 1:\n        return 1\n    return n * factorial_recursive(n - 1)\n\ndef factorial_iterative(n):\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    print(f\"Recursive: {factorial_recursive(n)}\")\n    print(f\"Iterative: {factorial_iterative(n)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "reverse_string.py",
+      "commit_msg": "Day 8: Reverse a string",
+      "code": "\"\"\"Program 8: Reverse a String\nReverses a string using slicing and a manual loop.\"\"\"\ndef reverse_slice(s):\n    return s[::-1]\n\ndef reverse_manual(s):\n    rev = \"\"\n    for ch in s:\n        rev = ch + rev\n    return rev\n\ndef main():\n    s = input(\"Enter a string: \")\n    print(f\"Slicing: {reverse_slice(s)}\")\n    print(f\"Manual:  {reverse_manual(s)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "count_vowels.py",
+      "commit_msg": "Day 9: Count vowels in a string",
+      "code": "\"\"\"Program 9: Count Vowels\nCounts the number of vowels in a string.\"\"\"\ndef count_vowels(s):\n    vowels = \"aeiouAEIOU\"\n    return sum(1 for ch in s if ch in vowels)\n\ndef main():\n    s = input(\"Enter a string: \")\n    print(f\"Number of vowels: {count_vowels(s)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "sum_of_digits.py",
+      "commit_msg": "Day 10: Sum of digits of a number",
+      "code": "\"\"\"Program 10: Sum of Digits\nCalculates the sum of digits of a number.\"\"\"\ndef sum_of_digits(n):\n    return sum(int(d) for d in str(abs(n)))\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    print(f\"Sum of digits: {sum_of_digits(n)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "multiplication_table.py",
+      "commit_msg": "Day 11: Multiplication table generator",
+      "code": "\"\"\"Program 11: Multiplication Table\nGenerates a multiplication table for a given number.\"\"\"\ndef multiplication_table(n, upto=10):\n    for i in range(1, upto + 1):\n        print(f\"{n} x {i} = {n * i}\")\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    multiplication_table(n)\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "largest_of_three.py",
+      "commit_msg": "Day 12: Find largest of three numbers",
+      "code": "\"\"\"Program 12: Largest of Three Numbers\nFinds the largest among three numbers.\"\"\"\ndef largest(a, b, c):\n    return max(a, b, c)\n\ndef main():\n    a = float(input(\"Enter first number: \"))\n    b = float(input(\"Enter second number: \"))\n    c = float(input(\"Enter third number: \"))\n    print(f\"Largest: {largest(a, b, c)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "grade_calculator.py",
+      "commit_msg": "Day 13: Student grade calculator",
+      "code": "\"\"\"Program 13: Grade Calculator\nAssigns a letter grade based on a score.\"\"\"\ndef get_grade(score):\n    if score >= 90: return \"A\"\n    if score >= 80: return \"B\"\n    if score >= 70: return \"C\"\n    if score >= 60: return \"D\"\n    return \"F\"\n\ndef main():\n    score = float(input(\"Enter score (0-100): \"))\n    print(f\"Grade: {get_grade(score)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "leap_year.py",
+      "commit_msg": "Day 14: Leap year checker",
+      "code": "\"\"\"Program 14: Leap Year Checker\nChecks if a year is a leap year.\"\"\"\ndef is_leap_year(year):\n    if year % 400 == 0:\n        return True\n    if year % 100 == 0:\n        return False\n    return year % 4 == 0\n\ndef main():\n    year = int(input(\"Enter a year: \"))\n    if is_leap_year(year):\n        print(f\"{year} is a leap year\")\n    else:\n        print(f\"{year} is not a leap year\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "count_words.py",
+      "commit_msg": "Day 16: Count words in a sentence",
+      "code": "\"\"\"Program 16: Word Counter\nCounts the number of words in a sentence.\"\"\"\ndef count_words(sentence):\n    return len(sentence.split())\n\ndef main():\n    s = input(\"Enter a sentence: \")\n    print(f\"Word count: {count_words(s)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "armstrong_number.py",
+      "commit_msg": "Day 17: Armstrong number checker",
+      "code": "\"\"\"Program 17: Armstrong Number Checker\nChecks if a number is an Armstrong number.\"\"\"\ndef is_armstrong(n):\n    digits = [int(d) for d in str(n)]\n    power = len(digits)\n    return sum(d ** power for d in digits) == n\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    if is_armstrong(n):\n        print(f\"{n} is an Armstrong number\")\n    else:\n        print(f\"{n} is not an Armstrong number\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "gcd_lcm.py",
+      "commit_msg": "Day 18: GCD and LCM calculator",
+      "code": "\"\"\"Program 18: GCD and LCM Calculator\nComputes the greatest common divisor and least common multiple.\"\"\"\ndef gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\ndef lcm(a, b):\n    return abs(a * b) // gcd(a, b) if a and b else 0\n\ndef main():\n    a = int(input(\"Enter first number: \"))\n    b = int(input(\"Enter second number: \"))\n    print(f\"GCD: {gcd(a, b)}\")\n    print(f\"LCM: {lcm(a, b)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "pattern_pyramid.py",
+      "commit_msg": "Day 19: Star pyramid pattern",
+      "code": "\"\"\"Program 19: Star Pyramid Pattern\nPrints a pyramid of stars of height n.\"\"\"\ndef pyramid(n):\n    for i in range(1, n + 1):\n        spaces = \" \" * (n - i)\n        stars = \"*\" * (2 * i - 1)\n        print(spaces + stars)\n\ndef main():\n    n = int(input(\"Enter pyramid height: \"))\n    pyramid(n)\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "file": "number_guessing_game.py",
+      "commit_msg": "Day 20: Number guessing game",
+      "code": "\"\"\"Program 20: Number Guessing Game\nThe computer picks a random number and you try to guess it.\"\"\"\nimport random\n\ndef main():\n    secret = random.randint(1, 100)\n    attempts = 0\n    print(\"Guess a number between 1 and 100!\")\n    while True:\n        guess = int(input(\"Your guess: \"))\n        attempts += 1\n        if guess < secret:\n            print(\"Too low!\")\n        elif guess > secret:\n            print(\"Too high!\")\n        else:\n            print(f\"Correct! You guessed it in {attempts} attempts.\")\n            break\n\nif __name__ == \"__main__\":\n    main()\n"
+    }
+  ]
+}
