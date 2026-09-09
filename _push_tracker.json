@@ -1,5 +1,5 @@
 {
-  "current_index": 17,
+  "current_index": 18,
   "total": 36,
   "note": "Combined tracker: 16 pushed, 20 pending. current_index=16 means next push is schedule[16].",
   "schedule": [
@@ -91,7 +91,7 @@
     {
       "file": "matrix_operations.py",
       "commit_msg": "Day 18: Matrix Operations",
-      "code": "\"\"\"Matrix Operations\nPerforms addition, subtraction, multiplication, transpose, and determinant.\"\"\"\nimport copy\n\n\ndef create_matrix(rows, cols):\n    matrix = []\n    for i in range(rows):\n        row = list(map(float, input(f\"Row {i+1} (space-separated): \").split()))\n        matrix.append(row)\n    return matrix\n\n\ndef print_matrix(m, label=\"Matrix\"):\n    print(f\"{label}:\")\n    for row in m:\n        print(\"  \", \" \".join(f\"{x:8.2f}\" for x in row))\n\n\ndef add(a, b):\n    return [[a[i][j] + b[i][j] for j in range(len(a[0]))] for i in range(len(a))]\n\n\ndef subtract(a, b):\n    return [[a[i][j] - b[i][j] for j in range(len(a[0]))] for i in range(len(a))]\n\n\ndef multiply(a, b):\n    result = [[0]*len(b[0]) for _ in range(len(a))]\n    for i in range(len(a)):\n        for j in range(len(b[0])):\n            for k in range(len(b)):\n                result[i][j] += a[i][k] * b[k][j]\n    return result\n\n\ndef transpose(m):\n    return [[m[j][i] for j in range(len(m))] for i in range(len(m[0]))]\n\n\ndef determinant(m):\n    n = len(m)\n    if n == 1: return m[0][0]\n    if n == 2: return m[0][0]*m[1][1] - m[0][1]*m[1][0]\n    det = 0\n    for c in range(n):\n        sub = [row[:c] + row[c+1:] for row in m[1:]]\n        det += ((-1)**c) * m[0][c] * determinant(sub)\n    return det\n\n\ndef main():\n    print(\"=\" * 40)\n    print(\"    MATRIX OPERATIONS\")\n    print(\"=\" * 40)\n    while True:\n        print(\"\\n1.Add  2.Subtract  3.Multiply  4.Transpose  5.Determinant  6.Exit\")\n        ch = input(\"Choice: \").strip()\n        if ch in ('1','2','3'):\n            r = int(input(\"Rows: \")); c = int(input(\"Cols: \"))\n            print(\"Matrix A:\"); a = create_matrix(r, c)\n            print(\"Matrix B:\"); b = create_matrix(r, c)\n            if ch == '1': print_matrix(add(a, b), \"A + B\")\n            elif ch == '2': print_matrix(subtract(a, b), \"A - B\")\n            else: print_matrix(multiply(a, b), \"A x B\")\n        elif ch == '4':\n            r = int(input(\"Rows: \")); c = int(input(\"Cols: \"))\n            a = create_matrix(r, c)\n            print_matrix(transpose(a), \"Transpose\")\n        elif ch == '5':\n            n = int(input(\"Size (NxN): \"))\n            a = create_matrix(n, n)\n            print(f\"Determinant: {determinant(a):.2f}\")\n        elif ch == '6': break\n        else: print(\"Invalid choice.\")\n\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": "pushed"
     },
     {
       "file": "simple_calculator.py",
