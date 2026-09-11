@@ -1,7 +1,7 @@
 {
   "current_index": 20,
-  "total": 36,
-  "note": "Combined tracker: 20 pushed, 16 pending. current_index=20 means next push is schedule[20].",
+  "total": 31,
+  "note": "Combined tracker: 20 pushed, 11 pending. Duplicates removed from schedule. current_index=20 means next push is schedule[20].",
   "schedule": [
     {
       "file": "stock_management.py",
@@ -104,21 +104,6 @@
       "code": "pushed"
     },
     {
-      "file": "fibonacci.py",
-      "commit_msg": "Day 4: Fibonacci sequence generator",
-      "code": "\"\"\"Program 4: Fibonacci Sequence\nGenerates the Fibonacci sequence up to n terms.\"\"\"\ndef fibonacci(n):\n    seq = [0, 1]\n    for i in range(2, n):\n        seq.append(seq[-1] + seq[-2])\n    return seq[:n]\n\ndef main():\n    n = int(input(\"Enter number of terms: \"))\n    print(fibonacci(n))\n\nif __name__ == \"__main__\":\n    main()\n"
-    },
-    {
-      "file": "palindrome_check.py",
-      "commit_msg": "Day 5: Palindrome string checker",
-      "code": "\"\"\"Program 5: Palindrome Checker\nChecks if a string reads the same forwards and backwards.\"\"\"\ndef is_palindrome(s):\n    cleaned = s.lower().replace(\" \", \"\")\n    return cleaned == cleaned[::-1]\n\ndef main():\n    s = input(\"Enter a string: \")\n    if is_palindrome(s):\n        print(f'\"{s}\" is a palindrome')\n    else:\n        print(f'\"{s}\" is not a palindrome')\n\nif __name__ == \"__main__\":\n    main()\n"
-    },
-    {
-      "file": "prime_check.py",
-      "commit_msg": "Day 6: Prime number checker",
-      "code": "\"\"\"Program 6: Prime Number Checker\nChecks if a number is prime.\"\"\"\ndef is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    if is_prime(n):\n        print(f\"{n} is a prime number\")\n    else:\n        print(f\"{n} is not a prime number\")\n\nif __name__ == \"__main__\":\n    main()\n"
-    },
-    {
       "file": "factorial.py",
       "commit_msg": "Day 7: Factorial using recursion and loop",
       "code": "\"\"\"Program 7: Factorial Calculator\nComputes factorial using both recursion and iteration.\"\"\"\ndef factorial_recursive(n):\n    if n <= 1:\n        return 1\n    return n * factorial_recursive(n - 1)\n\ndef factorial_iterative(n):\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    print(f\"Recursive: {factorial_recursive(n)}\")\n    print(f\"Iterative: {factorial_iterative(n)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
@@ -159,11 +144,6 @@
       "code": "\"\"\"Program 14: Leap Year Checker\nChecks if a year is a leap year.\"\"\"\ndef is_leap_year(year):\n    if year % 400 == 0:\n        return True\n    if year % 100 == 0:\n        return False\n    return year % 4 == 0\n\ndef main():\n    year = int(input(\"Enter a year: \"))\n    if is_leap_year(year):\n        print(f\"{year} is a leap year\")\n    else:\n        print(f\"{year} is not a leap year\")\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     {
-      "file": "count_words.py",
-      "commit_msg": "Day 16: Count words in a sentence",
-      "code": "\"\"\"Program 16: Word Counter\nCounts the number of words in a sentence.\"\"\"\ndef count_words(sentence):\n    return len(sentence.split())\n\ndef main():\n    s = input(\"Enter a sentence: \")\n    print(f\"Word count: {count_words(s)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
-    },
-    {
       "file": "armstrong_number.py",
       "commit_msg": "Day 17: Armstrong number checker",
       "code": "\"\"\"Program 17: Armstrong Number Checker\nChecks if a number is an Armstrong number.\"\"\"\ndef is_armstrong(n):\n    digits = [int(d) for d in str(n)]\n    power = len(digits)\n    return sum(d ** power for d in digits) == n\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    if is_armstrong(n):\n        print(f\"{n} is an Armstrong number\")\n    else:\n        print(f\"{n} is not an Armstrong number\")\n\nif __name__ == \"__main__\":\n    main()\n"
@@ -177,11 +157,6 @@
       "file": "pattern_pyramid.py",
       "commit_msg": "Day 19: Star pyramid pattern",
       "code": "\"\"\"Program 19: Star Pyramid Pattern\nPrints a pyramid of stars of height n.\"\"\"\ndef pyramid(n):\n    for i in range(1, n + 1):\n        spaces = \" \" * (n - i)\n        stars = \"*\" * (2 * i - 1)\n        print(spaces + stars)\n\ndef main():\n    n = int(input(\"Enter pyramid height: \"))\n    pyramid(n)\n\nif __name__ == \"__main__\":\n    main()\n"
-    },
-    {
-      "file": "number_guessing_game.py",
-      "commit_msg": "Day 20: Number guessing game",
-      "code": "\"\"\"Program 20: Number Guessing Game\nThe computer picks a random number and you try to guess it.\"\"\"\nimport random\n\ndef main():\n    secret = random.randint(1, 100)\n    attempts = 0\n    print(\"Guess a number between 1 and 100!\")\n    while True:\n        guess = int(input(\"Your guess: \"))\n        attempts += 1\n        if guess < secret:\n            print(\"Too low!\")\n        elif guess > secret:\n            print(\"Too high!\")\n        else:\n            print(f\"Correct! You guessed it in {attempts} attempts.\")\n            break\n\nif __name__ == \"__main__\":\n    main()\n"
     }
   ]
 }
