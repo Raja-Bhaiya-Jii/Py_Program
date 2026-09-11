@@ -1,7 +1,7 @@
 {
-  "current_index": 19,
+  "current_index": 20,
   "total": 36,
-  "note": "Combined tracker: 16 pushed, 20 pending. current_index=16 means next push is schedule[16].",
+  "note": "Combined tracker: 20 pushed, 16 pending. current_index=20 means next push is schedule[20].",
   "schedule": [
     {
       "file": "stock_management.py",
@@ -96,12 +96,12 @@
     {
       "file": "simple_calculator.py",
       "com_msg": "Day 2: Simple calculator with 4 operations",
-      "code": "\"\"\"Program 2: Simple Calculator\nPerforms addition, subtraction, multiplication, and division.\"\"\"\ndef add(a, b): return a + b\ndef sub(a, b): return a - b\ndef mul(a, b): return a * b\ndef div(a, b):\n    if b == 0:\n        return \"Error: Division by zero\"\n    return a / b\n\ndef main():\n    print(\"Simple Calculator\")\n    a = float(input(\"Enter first number: \"))\n    op = input(\"Enter operator (+, -, *, /): \")\n    b = float(input(\"Enter second number: \"))\n    ops = {\"+\": add, \"-\": sub, \"*\": mul, \"/\": div}\n    if op in ops:\n        print(f\"Result: {ops[op](a, b)}\")\n    else:\n        print(\"Invalid operator\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": "pushed"
     },
     {
       "file": "even_or_odd.py",
       "commit_msg": "Day 3: Even or Odd checker",
-      "code": "\"\"\"Program 3: Even or Odd Checker\nChecks if a number is even or odd.\"\"\"\ndef is_even(n):\n    return n % 2 == 0\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    if is_even(n):\n        print(f\"{n} is even\")\n    else:\n        print(f\"{n} is odd\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": "pushed"
     },
     {
       "file": "fibonacci.py",
