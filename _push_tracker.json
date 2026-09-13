@@ -1,5 +1,5 @@
 {
-  "current_index": 20,
+  "current_index": 21,
   "total": 31,
   "note": "Combined tracker: 20 pushed, 11 pending. Duplicates removed from schedule. current_index=20 means next push is schedule[20].",
   "schedule": [
@@ -95,7 +95,7 @@
     },
     {
       "file": "simple_calculator.py",
-      "com_msg": "Day 2: Simple calculator with 4 operations",
+      "comit_msg": "Day 20: Simple calculator with 4 operations",
       "code": "pushed"
     },
     {
@@ -106,57 +106,57 @@
     {
       "file": "factorial.py",
       "commit_msg": "Day 7: Factorial using recursion and loop",
-      "code": "\"\"\"Program 7: Factorial Calculator\nComputes factorial using both recursion and iteration.\"\"\"\ndef factorial_recursive(n):\n    if n <= 1:\n        return 1\n    return n * factorial_recursive(n - 1)\n\ndef factorial_iterative(n):\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    print(f\"Recursive: {factorial_recursive(n)}\")\n    print(f\"Iterative: {factorial_iterative(n)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": "pushed"
     },
     {
       "file": "reverse_string.py",
       "commit_msg": "Day 8: Reverse a string",
-      "code": "\"\"\"Program 8: Reverse a String\nReverses a string using slicing and a manual loop.\"\"\"\ndef reverse_slice(s):\n    return s[::-1]\n\ndef reverse_manual(s):\n    rev = \"\"\n    for ch in s:\n        rev = ch + rev\n    return rev\n\ndef main():\n    s = input(\"Enter a string: \")\n    print(f\"Slicing: {reverse_slice(s)}\")\n    print(f\"Manual:  {reverse_manual(s)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": """"Program 8: Reverse a String\nReverses a string using slicing and a manual loop."""\ndef reverse_slice(s):\n    return s[::-1]\n\ndef reverse_manual(s):\n    rev = ""\n    for ch in s:\n        rev = ch + rev\n    return rev\n\ndef main():\n    s = input(\"Enter a string: \")\n    print(f\"Slicing: {reverse_slice(s)}\")\n    print(f\"Manual:  {reverse_manual(s)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     {
       "file": "count_vowels.py",
       "commit_msg": "Day 9: Count vowels in a string",
-      "code": "\"\"\"Program 9: Count Vowels\nCounts the number of vowels in a string.\"\"\"\ndef count_vowels(s):\n    vowels = \"aeiouAEIOU\"\n    return sum(1 for ch in s if ch in vowels)\n\ndef main():\n    s = input(\"Enter a string: \")\n    print(f\"Number of vowels: {count_vowels(s)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": """"Program 9: Count Vowels\nCounts the number of vowels in a string."""\ndef count_vowels(s):\n    vowels = \"aeiouAEIOU\"\n    return sum(1 for ch in s if ch in vowels)\n\ndef main():\n    s = input(\"Enter a string: \")\n    print(f\"Number of vowels: {count_vowels(s)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     {
       "file": "sum_of_digits.py",
       "commit_msg": "Day 10: Sum of digits of a number",
-      "code": "\"\"\"Program 10: Sum of Digits\nCalculates the sum of digits of a number.\"\"\"\ndef sum_of_digits(n):\n    return sum(int(d) for d in str(abs(n)))\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    print(f\"Sum of digits: {sum_of_digits(n)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": """"Program 10: Sum of Digits\nCalculates the sum of digits of a number."""\ndef sum_of_digits(n):\n    return sum(int(d) for d in str(abs(n)))\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    print(f\"Sum of digits: {sum_of_digits(n)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     {
       "file": "multiplication_table.py",
       "commit_msg": "Day 11: Multiplication table generator",
-      "code": "\"\"\"Program 11: Multiplication Table\nGenerates a multiplication table for a given number.\"\"\"\ndef multiplication_table(n, upto=10):\n    for i in range(1, upto + 1):\n        print(f\"{n} x {i} = {n * i}\")\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    multiplication_table(n)\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": """"Program 11: Multiplication Table\nGenerates a multiplication table for a given number."""\ndef multiplication_table(n, upto=10):\n    for i in range(1, upto + 1):\n        print(f\"{n} x {i} = {n * i}\")\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    multiplication_table(n)\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     {
       "file": "largest_of_three.py",
       "commit_msg": "Day 12: Find largest of three numbers",
-      "code": "\"\"\"Program 12: Largest of Three Numbers\nFinds the largest among three numbers.\"\"\"\ndef largest(a, b, c):\n    return max(a, b, c)\n\ndef main():\n    a = float(input(\"Enter first number: \"))\n    b = float(input(\"Enter second number: \"))\n    c = float(input(\"Enter third number: \"))\n    print(f\"Largest: {largest(a, b, c)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": """"Program 12: Largest of Three Numbers\nFinds the largest among three numbers."""\ndef largest(a, b, c):\n    return max(a, b, c)\n\ndef main():\n    a = float(input(\"Enter first number: \"))\n    b = float(input(\"Enter second number: \"))\n    c = float(input(\"Enter third number: \"))\n    print(f\"Largest: {largest(a, b, c)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     {
       "file": "grade_calculator.py",
       "commit_msg": "Day 13: Student grade calculator",
-      "code": "\"\"\"Program 13: Grade Calculator\nAssigns a letter grade based on a score.\"\"\"\ndef get_grade(score):\n    if score >= 90: return \"A\"\n    if score >= 80: return \"B\"\n    if score >= 70: return \"C\"\n    if score >= 60: return \"D\"\n    return \"F\"\n\ndef main():\n    score = float(input(\"Enter score (0-100): \"))\n    print(f\"Grade: {get_grade(score)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": """"Program 13: Grade Calculator\nAssigns a letter grade based on a score."""\ndef get_grade(score):\n    if score >= 90: return \"A\"\n    if score >= 80: return \"B\"\n    if score >= 70: return \"C\"\n    if score >= 60: return \"D\"\n    return \"F\"\n\ndef main():\n    score = float(input(\"Enter score (0-100): \"))\n    print(f\"Grade: {get_grade(score)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     {
       "file": "leap_year.py",
       "commit_msg": "Day 14: Leap year checker",
-      "code": "\"\"\"Program 14: Leap Year Checker\nChecks if a year is a leap year.\"\"\"\ndef is_leap_year(year):\n    if year % 400 == 0:\n        return True\n    if year % 100 == 0:\n        return False\n    return year % 4 == 0\n\ndef main():\n    year = int(input(\"Enter a year: \"))\n    if is_leap_year(year):\n        print(f\"{year} is a leap year\")\n    else:\n        print(f\"{year} is not a leap year\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": """"Program 14: Leap Year Checker\nChecks if a year is a leap year."""\ndef is_leap_year(year):\n    if year % 400 == 0:\n        return True\n    if year % 100 == 0:\n        return False\n    return year % 4 == 0\n\ndef main():\n    year = int(input(\"Enter a year: \"))\n    if is_leap_year(year):\n        print(f\"{year} is a leap year\")\n    else:\n        print(f\"{year} is not a leap year\")\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     {
       "file": "armstrong_number.py",
       "commit_msg": "Day 17: Armstrong number checker",
-      "code": "\"\"\"Program 17: Armstrong Number Checker\nChecks if a number is an Armstrong number.\"\"\"\ndef is_armstrong(n):\n    digits = [int(d) for d in str(n)]\n    power = len(digits)\n    return sum(d ** power for d in digits) == n\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    if is_armstrong(n):\n        print(f\"{n} is an Armstrong number\")\n    else:\n        print(f\"{n} is not an Armstrong number\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": """"Program 17: Armstrong Number Checker\nChecks if a number is an Armstrong number."""\ndef is_armstrong(n):\n    digits = [int(d) for d in str(n)]\n    power = len(digits)\n    return sum(d ** power for d in digits) == n\n\ndef main():\n    n = int(input(\"Enter a number: \"))\n    if is_armstrong(n):\n        print(f\"{n} is an Armstrong number\")\n    else:\n        print(f\"{n} is not an Armstrong number\")\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     {
       "file": "gcd_lcm.py",
       "commit_msg": "Day 18: GCD and LCM calculator",
-      "code": "\"\"\"Program 18: GCD and LCM Calculator\nComputes the greatest common divisor and least common multiple.\"\"\"\ndef gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\ndef lcm(a, b):\n    return abs(a * b) // gcd(a, b) if a and b else 0\n\ndef main():\n    a = int(input(\"Enter first number: \"))\n    b = int(input(\"Enter second number: \"))\n    print(f\"GCD: {gcd(a, b)}\")\n    print(f\"LCM: {lcm(a, b)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": """"Program 18: GCD and LCM Calculator\nComputes the greatest common divisor and least common multiple."""\ndef gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\ndef lcm(a, b):\n    return abs(a * b) // gcd(a, b) if a and b else 0\n\ndef main():\n    a = int(input(\"Enter first number: \"))\n    b = int(input(\"Enter second number: \"))\n    print(f\"GCD: {gcd(a, b)}\")\n    print(f\"LCM: {lcm(a, b)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     {
       "file": "pattern_pyramid.py",
       "commit_msg": "Day 19: Star pyramid pattern",
-      "code": "\"\"\"Program 19: Star Pyramid Pattern\nPrints a pyramid of stars of height n.\"\"\"\ndef pyramid(n):\n    for i in range(1, n + 1):\n        spaces = \" \" * (n - i)\n        stars = \"*\" * (2 * i - 1)\n        print(spaces + stars)\n\ndef main():\n    n = int(input(\"Enter pyramid height: \"))\n    pyramid(n)\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": """"Program 19: Star Pyramid Pattern\nPrints a pyramid of stars of height n."""\ndef pyramid(n):\n    for i in range(1, n + 1):\n         spaces = \" \" * (n - i)\n         stars = \"*\" * (2 * i - 1)\n         print(spaces + stars)\n\ndef main():\n    n = int(input(\"Enter pyramid height: \"))\n    pyramid(n)\n\nif __name__ == \"__main__\":\n    main()\n"
     }
   ]
 }
