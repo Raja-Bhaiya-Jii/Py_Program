@@ -1,7 +1,7 @@
 {
-  "current_index": 30,
+  "current_index": 31,
   "total": 31,
-  "note": "Combined tracker: 30 pushed, 1 pending. current_index=30 means next push is schedule[30].",
+  "note": "All 31 programs pushed. Tracker complete.",
   "schedule": [
     {
       "file": "stock_management.py",
@@ -151,12 +151,12 @@
     {
       "file": "gcd_lcm.py",
       "commit_msg": "Day 18: GCD and LCM calculator",
-      "code": "\"\"\"Program 18: GCD and LCM Calculator\nComputes the greatest common divisor and least common multiple.\"\"\"\n\ndef gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\ndef lcm(a, b):\n    return abs(a * b) // gcd(a, b) if a and b else 0\n\ndef main():\n    a = int(input(\"Enter first number: \"))\n    b = int(input(\"Enter second number: \"))\n    print(f\"GCD: {gcd(a, b)}\")\n    print(f\"LCM: {lcm(a, b)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": "\"\"\"Program 18: GCD and LCM Calculator\nComputes the greatest common divisor and least common multiple.\"\"\"\n\ndef gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\ndef lcm(a, b):\n    return abs(a * b) // gcd(a, b) if a and b else 0\ndef main():\n    a = int(input(\"Enter first number: \"))\n    b = int(input(\"Enter second number: \"))\n    print(f\"GCD: {gcd(a, b)}\")\n    print(f\"LCM: {lcm(a, b)}\")\n\nif __name__ == \"__main__\":\n    main()\n"
     },
     {
       "file": "pattern_pyramid.py",
       "commit_msg": "Day 19: Star pyramid pattern",
-      "code": "\"\"\"Program 19: Star Pyramid Pattern\nPrints a pyramid of stars of height n.\"\"\"\n\ndef pyramid(n):\n    for i in range(1, n + 1):\n         spaces = \" \" * (n - i)\n         stars = \"*\" * (2 * i - 1)\n         print(spaces + stars)\n\ndef main():\n    n = int(input(\"Enter pyramid height: \"))\n    pyramid(n)\n\nif __name__ == \"__main__\":\n    main()\n"
+      "code": "pushed"
     }
   ]
 }
